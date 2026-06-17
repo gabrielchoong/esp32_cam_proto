@@ -1,0 +1,17 @@
+CompileFlags:
+  CompilationDatabase: build/
+  Remove:
+    - -fno-malloc-dce
+    - -fzero-init-padding-bits=all
+    - -fno-tree-switch-conversion
+    - -fstrict-volatile-bitfields
+    - -fno-shrink-wrap
+    - -fno-jump-tables
+    - -mdisable-hardware-atomics
+    - -mfix-esp32-psram-cache-strategy=memw
+    - -mfix-esp32-psram-cache-issue
+    - -mlongcalls
+  Add:
+    - --target=xtensa-esp32-elf
+    - -isystem/Users/gabriel/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/picolibc/include
+    - -isystem/Users/gabriel/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/picolibc/xtensa-esp-elf/sys-include
